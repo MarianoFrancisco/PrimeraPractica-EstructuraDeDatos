@@ -38,6 +38,7 @@ public class SeleccionarOrdenApuesta extends javax.swing.JFrame {
     FileWriter subirResultados = null;
     BufferedWriter leerApuestaR = null;
     PrintWriter imprimirArchivo;
+    public static String c[];
     public static OrdenCarrera[] ordenDeCarrera=new OrdenCarrera[1];
     FondoInicio seleccionApuesta = new FondoInicio();//Creamos un nuevo fondo
     public SeleccionarOrdenApuesta() {
@@ -439,7 +440,7 @@ public class SeleccionarOrdenApuesta extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     private void analizarTextoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_analizarTextoActionPerformed
-        String c[] = new String[10];
+        c = new String[10];
         String orden[] = new String[10];
         boolean vacio = false;
         boolean ordenMal = false;
@@ -597,7 +598,7 @@ public class SeleccionarOrdenApuesta extends javax.swing.JFrame {
             Inicio.ordenarAlfabeticamente();
             for (int i = 0; i < apostadores.length; i++) {//O(n) pasos
                 if (apostadores[i] != null) {//2 pasos
-                    subirResultados.write("Nombre: " + apostadores[i].getNombre() + ", Monto"+apostadores[i].getMonto()+", Punteo: "+apostadores[i].getPunteo()+"\n");
+                    subirResultados.write("Apuesta: " + apostadores[i].toString() + ", Punteo Obtenido: "+apostadores[i].getPunteo()+"\n");
                 }
             }
             subirResultados.close();//2 pasos
@@ -610,7 +611,7 @@ public class SeleccionarOrdenApuesta extends javax.swing.JFrame {
             Inicio.ordenarPunteo();
             for (int i = 0; i < apostadores.length; i++) {//O(n) pasos
                 if (apostadores[i] != null) {//2
-                    subirResultados.write("Nombre: " + apostadores[i].getNombre() + ", Monto"+apostadores[i].getMonto()+", Punteo: "+apostadores[i].getPunteo()+"\n");
+                    subirResultados.write("Apuesta: " + apostadores[i].toString() + ", Punteo Obtenido: "+apostadores[i].getPunteo()+"\n");
                 }
             }
             subirResultados.close();//2 pasos

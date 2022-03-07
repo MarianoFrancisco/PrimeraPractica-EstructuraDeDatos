@@ -95,13 +95,13 @@ public class VerResultados extends javax.swing.JFrame {
 
         resultadosTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "NOMBRE DE APOSTADOR", "MONTO", "PUNTEO"
+                "NOMBRE DE APOSTADOR", "MONTO", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "PUNTEO"
             }
         ));
         jScrollPane3.setViewportView(resultadosTable);
